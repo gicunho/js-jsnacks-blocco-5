@@ -69,7 +69,7 @@ function pesoZucchine(array) {
 pesoZucchine(zucchine);
 
 /************************
- ******* SNACK 1 ******** 
+ ******* SNACK 2 ******** 
  ***********************/
 
  //Dividi in due array separati le zucchine che misurano meno o più di 15cm.
@@ -89,4 +89,27 @@ for (j = 0; j < zucchine.length; j++) {
 console.log(zucchineLunghe);
  pesoZucchine(zucchineLunghe)
 console.log(zucchineCorte);
- pesoZucchine(zucchineCorte)
+ pesoZucchine(zucchineCorte);
+
+var ciao = 'ciao';
+
+/************************
+ ******* SNACK 3 ******** 
+ ***********************/
+
+ //Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
+ function parola(parola) {
+    
+ }
+ function stringaInversa(stringa) {
+    var splitStringa = stringa.split("");
+ 
+    var arrayInverso = splitStringa.reverse();
+ 
+    var joinArray = arrayInverso.join(""); 
+    
+    return joinArray;
+}
+
+var parola = prompt('Inserisci la parola da invertire')
+console.log(stringaInversa(parola));
