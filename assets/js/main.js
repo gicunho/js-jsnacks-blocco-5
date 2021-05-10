@@ -7,59 +7,86 @@
      {
          varietà: 'Nera di Milano',
          peso: 0.7,
-         lunghezza: 145,
+         lunghezza: 14,
      },
      {
         varietà: 'Alberello',
         peso: 0.8,
-        lunghezza: 145,
+        lunghezza: 10,
     },
     {
         varietà: 'Tonda di Nizza',
         peso: 1.1,
-        lunghezza: 145,
+        lunghezza: 18,
     },
     {
         varietà: 'Trombetta d\'Albenga',
         peso: 0.2,
-        lunghezza: 145,
+        lunghezza: 15,
     },
     {
         varietà: 'Nera di Milano',
         peso: 0.4,
-        lunghezza: 145,
+        lunghezza: 24,
     },
     {
         varietà: 'Alberello',
         peso: 0.7,
-        lunghezza: 145,
+        lunghezza: 12,
     },
     {
         varietà: 'Lunghe Fiorentine',
         peso: 1,
-        lunghezza: 145,
+        lunghezza: 9,
     },
     {
         varietà: 'Nera di Milano',
         peso: 1.7,
-        lunghezza: 145,
+        lunghezza: 16,
     },
     {
         varietà: 'Tonda di Nizza',
         peso: 0.15,
-        lunghezza: 145
+        lunghezza: 15,
     },
     {
         varietà: 'Nera di Milano',
         peso: 0.66,
-        lunghezza: 145,
+        lunghezza: 19.5,
     }
  ]
 //Calcola quanto pesano tutte le zucchine.
-var pesoTotale = null;
-for (i = 0; i < zucchine.length; i++) { 
-   console.log(zucchine[i].peso);
-    pesoTotale += zucchine[i].peso;
+function pesoZucchine(array) {
+    var pesoTotale = null;
+    for (i = 0; i < array.length; i++) { 
+        //console.log(array[i].peso);
+        pesoTotale += array[i].peso;
+    }
+    return console.log(pesoTotale.toFixed(2));
+
 }
 
-console.log(pesoTotale.toFixed(2));
+pesoZucchine(zucchine);
+
+/************************
+ ******* SNACK 1 ******** 
+ ***********************/
+
+ //Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+var zucchineLunghe = [];
+var zucchineCorte = [];
+
+for (j = 0; j < zucchine.length; j++) {
+    if (zucchine[j].lunghezza > 15) {
+        zucchineLunghe.push(zucchine[j]);
+
+    } else {
+        zucchineCorte.push(zucchine[j])
+    }
+}
+
+ //Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+console.log(zucchineLunghe);
+ pesoZucchine(zucchineLunghe)
+console.log(zucchineCorte);
+ pesoZucchine(zucchineCorte)
