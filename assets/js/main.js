@@ -113,3 +113,22 @@ var ciao = 'ciao';
 
 var parola = prompt('Inserisci la parola da invertire')
 console.log(stringaInversa(parola));
+
+/************************
+ ******* SNACK 4 ******** 
+ ***********************/
+
+ //Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+ var lettere = ['a', 'b', 'c'];
+ var numeri = [1,2,3];
+ var fusione = [];
+ 
+ function fusioneArray (array1, array2){
+    for (a = 0; a < array1.length; a++) {
+        fusione.push(array1[a]);
+        fusione.push(array2[a]);
+    }
+ }
+ fusioneArray(lettere, numeri)
+ console.log(fusione);
+ //es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
