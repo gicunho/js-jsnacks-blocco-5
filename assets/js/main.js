@@ -124,11 +124,27 @@ console.log(stringaInversa(parola));
  var fusione = [];
  
  function fusioneArray (array1, array2){
-    for (a = 0; a < array1.length; a++) {
+    for (var a = 0; a < array1.length; a++) {
         fusione.push(array1[a]);
         fusione.push(array2[a]);
     }
  }
  fusioneArray(lettere, numeri)
  console.log(fusione);
- //es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+ /************************
+ ******* SNACK 5 ******** 
+ ***********************/
+
+ //Scrivi una funzione che accetti tre argomenti:
+//un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
+//La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
+var arrayNuova = [];
+function generator(array, a, b) {
+    for (var y = a; y < b; y++) {
+        arrayNuova.push(array[y]);
+    }
+}
+
+generator(zucchine, 3, 9)
+console.log(arrayNuova);
