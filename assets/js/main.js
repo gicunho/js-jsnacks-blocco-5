@@ -98,9 +98,7 @@ var ciao = 'ciao';
  ***********************/
 
  //Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
- function parola(parola) {
-    
- }
+
  function stringaInversa(stringa) {
     var splitStringa = stringa.split("");
  
@@ -141,7 +139,7 @@ console.log(stringaInversa(parola));
 //La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
 var arrayNuova = [];
 function generator(array, a, b) {
-    for (var y = a; y < b; y++) {
+    for (var y = a - 1; y < b; y++) {
         arrayNuova.push(array[y]);
     }
 }
